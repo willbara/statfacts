@@ -1,0 +1,13 @@
+# Build output (rebuild with ./build.sh)
+build/
+*.class
+*.jar
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Local server data (never commit player stats)
+players/
+plugins/

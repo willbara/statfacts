@@ -1,0 +1,15 @@
+name: StatFacts
+version: 2.0.0
+main: statfacts.StatFactsPlugin
+api-version: '26.3'
+description: Announces random player stats and milestones, read live from the players/stats folder.
+commands:
+  statfacts:
+    description: Configure StatFacts (operators only).
+    usage: /statfacts <status|reload|announce|set|stat|stats|exclude>
+    permission: statfacts.admin
+    permission-message: Only operators can use StatFacts commands.
+permissions:
+  statfacts.admin:
+    description: Use the StatFacts commands.
+    default: op

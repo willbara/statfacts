@@ -1,0 +1,184 @@
+# StatFacts configuration.
+#
+# Everything here can also be changed in game by an operator with /statfacts:
+#   /statfacts set <key> <value>      for the settings near the top
+#   /statfacts stat <id> on|off       for each stat in the "stats" section
+#   /statfacts exclude <player> add|remove
+# Commands rewrite this file, which drops these comments. Edit by hand, then
+# run /statfacts reload to apply.
+
+# Master switch. false = no announcements and no milestones.
+enabled: true
+
+# Seconds between random announcements.
+interval-seconds: 600
+
+# Only announce while at least this many players (not excluded) are online.
+min-players: 1
+
+# Percent chance (0-100) that an announcement compares players online
+# (leader, head-to-head or combined total). Needs 2+ players. 0 = never.
+multi-chance: 25
+
+# true = single-player facts may be about players who are offline, using their
+# saved stats. Comparisons and milestones always need players online.
+include-offline: true
+
+# Folder with the players' stat files (<uuid>.json), relative to the server folder.
+# Read live: new players appear as soon as the server writes their file.
+stats-folder: players/stats
+
+milestones:
+  enabled: true
+  # Seconds between milestone checks.
+  check-seconds: 5
+  # A milestone fires when a player's stat crosses one of these values.
+  # Values are in the stat's own units: km, count, hours, hearts of damage.
+  # Keep each list ascending. The last rung of each list gets "Incredible!".
+  km: [100, 1000, 10000]
+  count: [1000, 10000, 100000]
+  hours: [100, 1000]
+  hearts: [1000, 10000]
+
+# Players never named in announcements, by name (case does not matter) or UUID.
+excluded-players: []
+
+# Which stats can be announced. true = on, false = off. Milestones for a stat
+# follow the same switch.
+stats:
+  anvil: true
+  barrels: true
+  bell: true
+  blastfurnace: true
+  boat: true
+  breed: true
+  brewing: true
+  c_birchplanks: true
+  c_bonemeal: true
+  c_glass: true
+  c_goldcarrot: true
+  c_goldingot: true
+  c_goldnugget: true
+  c_ironingot: true
+  c_ironnugget: true
+  c_mosscarpet: true
+  c_oakplanks: true
+  c_spruceplanks: true
+  c_stick: true
+  c_stonebricks: true
+  c_torch: true
+  cake: true
+  cauldron: true
+  chests: true
+  climb: true
+  crafting: true
+  crouch: true
+  deaths: true
+  dmgdealt: true
+  dmgtaken: true
+  dropped: true
+  elytra: true
+  enchant: true
+  enderchest: true
+  fall: true
+  fish: true
+  fly: true
+  furnace: true
+  grindstone: true
+  happyghast: true
+  horse: true
+  jump: true
+  k_blaze: true
+  k_brute: true
+  k_cow: true
+  k_creeper: true
+  k_drowned: true
+  k_enderman: true
+  k_endermite: true
+  k_ghast: true
+  k_guardian: true
+  k_hoglin: true
+  k_magma: true
+  k_phantom: true
+  k_piglin: true
+  k_pillager: true
+  k_shulker: true
+  k_silverfish: true
+  k_skeleton: true
+  k_spider: true
+  k_vindicator: true
+  k_witch: true
+  k_witherskel: true
+  k_zombie: true
+  k_zpiglin: true
+  m_andesite: true
+  m_basalt: true
+  m_blackstone: true
+  m_carrots: true
+  m_coal: true
+  m_cobble: true
+  m_debris: true
+  m_deepslate: true
+  m_diamond: true
+  m_diorite: true
+  m_dirt: true
+  m_dsdiamond: true
+  m_granite: true
+  m_grass: true
+  m_gravel: true
+  m_iron: true
+  m_leaves: true
+  m_netherbricks: true
+  m_netherrack: true
+  m_oaklog: true
+  m_quartz: true
+  m_sand: true
+  m_scaffold: true
+  m_shortgrass: true
+  m_stone: true
+  m_stonebricks: true
+  m_tuff: true
+  minecart: true
+  mobkills: true
+  noteblock: true
+  playerkills: true
+  playtime: true
+  r_chests: true
+  r_dmg: true
+  r_jump: true
+  r_mobs: true
+  r_walk: true
+  raids: true
+  records: true
+  seafloor: true
+  shield: true
+  shulkers: true
+  sincedeath: true
+  sincerest: true
+  sleep: true
+  smithing: true
+  smoker: true
+  sneaktime: true
+  sprint: true
+  stonecutter: true
+  swim: true
+  talk: true
+  trade: true
+  travel: true
+  u_bow: true
+  u_carrot: true
+  u_cobble: true
+  u_daxe: true
+  u_dirt: true
+  u_dpick: true
+  u_dshovel: true
+  u_dsword: true
+  u_ironpick: true
+  u_ironsword: true
+  u_netaxe: true
+  u_netpick: true
+  u_nsword: true
+  u_shears: true
+  u_stonebricks: true
+  u_torch: true
+  walk: true
